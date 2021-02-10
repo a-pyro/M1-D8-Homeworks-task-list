@@ -24,16 +24,16 @@
     /> -->
 
     <!-- animate css -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    /> -->
     <link rel="stylesheet" href="style.css" />
 
     <title>Task List!</title>
   </head>
-  <body class="animate__animated animate__fadeIn">
-    <main class="container">
+  <body>
+    <main class="container hide">
       <header class="header section-spacing">
         <h1>Task List</h1>
         <p>
@@ -55,7 +55,7 @@
         </label>
         <select class="form-select">
           <option value="default" selected>Default</option>
-          <option value="red ">Red</option>
+          <option value="red">Red</option>
           <option value="blue">Blue</option>
           <option value="green">Green</option>
         </select>
@@ -66,8 +66,47 @@
         <input type="text" name="filterInput" id="filterInput" />
         <button id="sortBtn">Sort</button>
       </section>
+
+      <p>Filter by color</p>
+      <section class="filter-radio">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          value="all"
+        />
+        <label class="form-check-label"> All </label>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          value="default"
+        />
+        <label class="form-check-label"> Grey </label>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          value="red"
+        />
+        <label class="form-check-label"> Red </label>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          value="blue"
+        />
+        <label class="form-check-label"> Blue </label>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          value="green"
+        />
+        <label class="form-check-label"> Green </label>
+      </section>
       <!-- tasks -->
-      <section class="tasks section-spacing">
+      <section class="tasks section-spacing hide">
         <ul id="taskList"></ul>
       </section>
     </main>
