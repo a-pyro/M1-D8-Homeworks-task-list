@@ -81,4 +81,10 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   //storage
+  function addStorage(params) {}
+
+  function getStore() {
+    const taskInStore = localStorage.getItem('taskList');
+    if (taskInStore) return JSON.parse(taskInStore);
+  }
 });
