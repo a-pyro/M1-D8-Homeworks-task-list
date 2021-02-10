@@ -105,3 +105,15 @@ li {
   margin-left: auto;
   cursor: pointer;
 }
+.task-color-task.default {
+  background-color: grey;
+}
+.task-color-task.red {
+  background-color: red;
+}
+.task-color-task.green {
+  background-color: green;
+}
+.task-color-task.blue {
+  background-color: blue;
+}

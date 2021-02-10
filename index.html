@@ -43,7 +43,7 @@
       </header>
       <!-- aggiungi i task -->
       <section class="form section-spacing">
-        <form>
+        <form id="form">
           <input type="text" id="inputText" />
           <button type="submit">Add New Task</button>
         </form>
@@ -54,37 +54,21 @@
           Select a color tag
         </label>
         <select class="form-select">
-          <option selected>Default</option>
-          <option value="1">Red</option>
-          <option value="2">Blue</option>
-          <option value="3">Green</option>
+          <option value="default" selected>Default</option>
+          <option value="red ">Red</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
         </select>
       </section>
       <!-- sort & filter -->
       <section class="filter section-spacing">
         <label for="filterInput">Filter tasks</label>
         <input type="text" name="filterInput" id="filterInput" />
-        <button class="sort-tasks">Sort</button>
+        <button id="sortBtn">Sort</button>
       </section>
       <!-- tasks -->
       <section class="tasks section-spacing">
-        <ul id="taskList">
-          <li class="task">
-            <span class="task-color-task"></span>task<span class="delete-task"
-              >x</span
-            >
-          </li>
-          <li class="task">
-            <span class="task-color-task"></span>task<span class="delete-task"
-              >x</span
-            >
-          </li>
-          <li class="task">
-            <span class="task-color-task"></span>task<span class="delete-task"
-              >x</span
-            >
-          </li>
-        </ul>
+        <ul id="taskList"></ul>
       </section>
     </main>
     <!-- Option 1: Bootstrap Bundle with Popper -->
