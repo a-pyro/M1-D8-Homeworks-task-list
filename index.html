@@ -34,7 +34,7 @@
   </head>
   <body class="animate__animated animate__fadeIn">
     <main class="container">
-      <header class="header">
+      <header class="header section-spacing">
         <h1>Task List</h1>
         <p>
           Add a task by writing in the input field and pressing enter or the
@@ -42,43 +42,43 @@
         </p>
       </header>
       <!-- aggiungi i task -->
-      <section class="form">
+      <section class="form section-spacing">
         <form>
           <input type="text" id="inputText" />
           <button type="submit">Add New Task</button>
         </form>
-        <section class="tag-color"></section>
       </section>
       <!-- color tag  -->
-      <section class="color-tag">
-        <input
-          class="radio-color"
-          type="radio"
-          name="tag-color"
-          value="grey"
-          checked
-        />
-        <input class="radio-color" type="radio" name="tag-color" value="red" />
-        <input
-          class="radio-color"
-          type="radio"
-          name="tag-color"
-          value="green"
-        />
-        <input class="radio-color" type="radio" name="tag-color" value="blue" />
+      <section class="color-tag section-spacing">
         <label class="form-check-label" for="tag-color">
           Select a color tag
         </label>
+        <select class="form-select">
+          <option selected>Default</option>
+          <option value="1">Red</option>
+          <option value="2">Blue</option>
+          <option value="3">Green</option>
+        </select>
       </section>
       <!-- sort & filter -->
-      <section class="filter">
-        <input type="text" name="filterInput" id="filterInput" />
+      <section class="filter section-spacing">
         <label for="filterInput">Filter tasks</label>
+        <input type="text" name="filterInput" id="filterInput" />
         <button class="sort-tasks">Sort</button>
       </section>
       <!-- tasks -->
-      <section class="tasks">
+      <section class="tasks section-spacing">
         <ul id="taskList">
+          <li class="task">
+            <span class="task-color-task"></span>task<span class="delete-task"
+              >x</span
+            >
+          </li>
+          <li class="task">
+            <span class="task-color-task"></span>task<span class="delete-task"
+              >x</span
+            >
+          </li>
           <li class="task">
             <span class="task-color-task"></span>task<span class="delete-task"
               >x</span

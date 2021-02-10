@@ -6,6 +6,102 @@ html {
 }
 body {
   margin: 0;
-
   font-family: 'Work Sans', sans-serif;
+  background-color: #ccf2f4;
+  height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.section-spacing {
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding: 0.5rem 0;
+  padding-bottom: 1.8rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+.header {
+  flex-direction: column;
+}
+
+.color-tag {
+  flex-direction: column;
+}
+
+.filter {
+  flex-direction: column;
+}
+
+.tasks {
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+input[type='text'] {
+  width: 100%;
+  margin-right: 0.4rem;
+  display: block;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid black;
+  padding: 0 0.5rem;
+  margin-bottom: 0.5rem;
+}
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border: 1px solid black;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+form button {
+  align-self: center;
+}
+ul {
+  list-style: none;
+  width: 100%;
+}
+.form-select {
+  padding: 0.5rem 0.9rem;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+li {
+  width: 100%;
+  display: flex;
+  padding-right: 0.5rem;
+  align-items: center;
+}
+
+.task-color-task {
+  display: inline-block;
+  margin-right: 2rem;
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.delete-task {
+  display: inline-block;
+  margin-left: auto;
+  cursor: pointer;
 }
