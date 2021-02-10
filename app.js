@@ -18,9 +18,6 @@ window.addEventListener('DOMContentLoaded', () => {
   filterInputDOM.addEventListener('keyup', filterTasks);
 
   //functions
-  function getID(taskList) {
-    return taskList.length;
-  }
 
   function addTask(e) {
     const taskBody = userInputDOM.value;
@@ -33,7 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     const taskColor = colorSelectorDOM.value;
 
-    tasksMemory.push({ taskBody, taskColor, taskiD: getID(tasksMemory) });
+    tasksMemory.push({ taskBody, taskColor, taskiD: null });
     console.table(tasksMemory);
 
     clearInput(userInputDOM);
@@ -45,21 +42,34 @@ window.addEventListener('DOMContentLoaded', () => {
     if (e.target.className === 'delete-task') {
       console.log(e.target.parentElement);
       const taskiD = parseInt(document.querySelector('.task-id').innerText);
-      tasksMemory.splice(taskiD, 1);
+
+      tasksMemory.splice(taskiD - 1, 1);
       showTasks(tasksMemory);
     } else {
       console.log('no way ');
     }
   }
   function sortList() {}
-  function filterTasks() {}
+
+  function filterTasks() {
+    if (filterInputDOM.value) {
+      const filtered = tasksMemory.filter((task) =>
+        task.taskBody.includes(filterInputDOM.value)
+      );
+      showTasks(filtered);
+    } else {
+      showTasks(tasksMemory);
+    }
+  }
 
   function showTasks(taskList) {
     taskListDOM.innerHTML = '';
-    taskList.forEach((task) => {
-      const { taskiD, taskBody, taskColor } = task;
+    taskList.forEach((task, idx) => {
+      const { taskBody, taskColor } = task;
       const html = `<li class='task'>
-          <span class='task-color-task ${taskColor}'></span> <span class="task-id">${taskiD}</span> - ${taskBody}
+          <span class='task-color-task ${taskColor}'></span> <span class="task-id">${
+        idx + 1
+      }</span> - ${taskBody}
           <span class='delete-task'>x</span>
         </li>`;
       taskListDOM.insertAdjacentHTML('beforeend', html);
