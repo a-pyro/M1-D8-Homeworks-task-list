@@ -99,12 +99,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
     taskList.forEach((task, idx) => {
       const { taskBody, taskColor } = task;
-      const html = `<li class='task hide'>
+      const html = `
+      <li class='task hide'>
           <span class='task-color-task ${taskColor}'></span> <span class="task-id">${
         idx + 1
       }</span> - ${taskBody}
           <span class='delete-task'>x</span>
-        </li>`;
+      </li>`;
       taskListDOM.insertAdjacentHTML('beforeend', html);
     });
 
